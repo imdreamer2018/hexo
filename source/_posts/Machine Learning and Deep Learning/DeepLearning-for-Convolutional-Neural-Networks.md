@@ -5,7 +5,6 @@ tags:
 
   - Convolution
 
-  - Neural
 
 toc: true
 categories: []
@@ -13,7 +12,7 @@ date: 2018-03-13 14:43:00
 ---
 # 卷积神经网络
 
-此教材来自吴恩达（Andrew Ng）网易公开课
+此教材来自吴恩达（Andrew Ng）<a href="http://mooc.study.163.com/course/2001281004#/info">网易公开课 </a>
 <!--more-->
 ## 一.计算机视觉
 ### 1.计算机视觉问题
