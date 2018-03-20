@@ -11,7 +11,7 @@ date: 2018-3-20 11:02:00
 tags:
 
 - MachineLearning
-- (un)supervised Learning
+- Linear Regression
 
 ---
 
