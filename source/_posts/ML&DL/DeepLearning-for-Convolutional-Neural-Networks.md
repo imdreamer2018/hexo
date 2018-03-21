@@ -17,8 +17,12 @@ date: 2018-03-13 14:43:00
 
 # 卷积神经网络
 
-此教材来自吴恩达（Andrew Ng）<a href="http://mooc.study.163.com/course/2001281004#/info">网易公开课 </a>
+此教材来自吴恩达（Andrew Ng）<a href="http://mooc.study.163.com/course/2001281004#/info">网易公开课 </a>，本文旨在分享深度学习知识，如有侵权，可联系本人下架文章。
 <!--more-->
+
+![Andrew Ng](http://imgss.lovebingzi.com/Deep-Convolution-Neural-Networks/Andrew%20Ng.png)膜拜
+
+
 
 ## 一.计算机视觉
 
