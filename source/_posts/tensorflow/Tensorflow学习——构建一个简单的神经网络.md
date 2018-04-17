@@ -92,11 +92,11 @@ for i in range(1000):
 
 使用jupyter notebook不能动态显示图
 
-![](https://yunoss.chinadream.org/20180416/20180416_%E6%9E%84%E5%BB%BA%E7%AE%80%E5%8D%95%E7%9A%84%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C.png?OSSAccessKeyId=LTAIsG5eZOeImsiF&Expires=1523891174&Signature=6Z7viLbcDXG%2F3%2FVayg2aDnm1Vnw%3D)
+![](http://imgss.lovebingzi.com/tensorflow/%E6%9E%84%E5%BB%BA%E7%AE%80%E5%8D%95%E7%9A%84%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C.png)
 
 **1、**在上述代码中x_data = np.linspace(-1,1,300)[:,np.newaxis]，关于numpy.linspace使用详解
 
-![linspace](https://yunoss.chinadream.org/20180416/20180416_linspace.png?OSSAccessKeyId=LTAIsG5eZOeImsiF&Expires=1523890602&Signature=mCQDllVdsXn8GAAUdpxUZ2MCabA%3D)
+![linspace](http://imgss.lovebingzi.com/tensorflow/linspace.png)
 
 官网的例子
 
