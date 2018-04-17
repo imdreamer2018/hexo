@@ -1,6 +1,10 @@
 title: Tensorflow学习—Tensorboard可视化好帮手
 author: 追梦人
+
+toc: true
+
 tags:
+
   - tensorflow
   - MachineLearning
   - tensorboard
