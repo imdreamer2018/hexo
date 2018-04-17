@@ -110,7 +110,7 @@ np.newaxis的功能是插入新维度，np.newaxis分别是在行或列上增加
 
 **2、**在tensorflow的使用中，经常会使用tf.reduce_mean平均数,tf.reduce_sum求和等函数，在函数中，有一个reduction_indices参数，表示函数的处理维度，直接上图，一目了然：
 
-![reduction_indices](https://yunoss.chinadream.org/20180415/20180415_reduction_indices.png?OSSAccessKeyId=LTAIsG5eZOeImsiF&Expires=1523891041&Signature=KGfkmNKcP%2FjTtKe97D84V9jlVUs%3D)
+![reduction_indices](http://imgss.lovebingzi.com/tensorflow/reduction_indices.png)
 
 需要注意的一点，在很多的时候，我们看到别人的代码中并没有reduction_indices这个参数，此时该参数取默认值None，将把input_tensor降到0维，也就是一个数。
 
