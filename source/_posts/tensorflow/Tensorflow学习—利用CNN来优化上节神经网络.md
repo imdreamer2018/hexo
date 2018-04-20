@@ -1,15 +1,18 @@
-title: Tensorflow学习—利用CNN来优化上节神经网络
-author: 追梦人
+  title: Tensorflow学习—利用CNN来优化上节神经网络
 
-toc: true
+  author: 追梦人
 
-tags:
+  toc: true
 
-- MachineLearning
-- tensorflow
-- ConvolutionNetwork
   categories: []
-  date: 2018-04-20 10:25:00
+
+  date: 2018-4-20 11:36:00
+
+  tags:
+
+  - MachineLearning
+  - tensorflow
+  - ConvolutionNetwork
 
 ---
 

@@ -1,6 +1,10 @@
 title: Tensorflow学习—什么是过拟合以及dropout解决过拟合问题
 author: 追梦人
 
+date: 2018-04-19 10:25:00
+
+categories: []
+
 toc: true
 
 tags:
@@ -13,8 +17,8 @@ tags:
 
 - dropout
 
-  categories: []
-  date: 2018-04-19 10:25:00
+  ​
+  ​
 
 
 ---
