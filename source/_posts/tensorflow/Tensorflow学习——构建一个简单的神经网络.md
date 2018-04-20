@@ -17,11 +17,16 @@ tags:
 
 # 基于线性回归构建神经网络
 
-此教材来自[莫凡Python](https://morvanzhou.github.io/tutorials/machine-learning/tensorflow/)，本文旨在分享深度学习知识，如有侵权，可联系本人下架文章。
+此教材来自[莫凡Python](https://morvanzhou.github.io/tutorials/machine-learning/tensorflow/)，本文旨在分享机器学习知识，如有侵权，可联系本人下架文章。
+
+学习资料:
+
+- 为 TF 2017 打造的[新版可视化教学代码](https://github.com/MorvanZhou/Tensorflow-Tutorial)
+- 机器学习-简介系列什么是[线性回归](https://www.dreamer.im/2018/03/20/ML&DL/MachineLearning%E2%80%942%E3%80%81%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/)
 
 <!--more-->
 
-```
+```python
 import tensorflow as tf
 import numpy as np
 import matplotlib.pyplot as plt
@@ -90,9 +95,7 @@ for i in range(1000):
 
 **代码运行截图**
 
-使用jupyter notebook不能动态显示图
-
-![](http://imgss.lovebingzi.com/tensorflow/%E6%9E%84%E5%BB%BA%E7%AE%80%E5%8D%95%E7%9A%84%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C.png)
+![](http://imgss.lovebingzi.com/tensorflow/ouput.gif)
 
 **1、**在上述代码中x_data = np.linspace(-1,1,300)[:,np.newaxis]，关于numpy.linspace使用详解
 

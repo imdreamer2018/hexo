@@ -14,7 +14,7 @@ date: 2018-04-17 15:25:00
 
 # 使用神经网络识别手写数字
 
-此教材来自[莫凡Python](https://morvanzhou.github.io/tutorials/machine-learning/tensorflow/)，本文旨在分享深度学习知识，如有侵权，可联系本人下架文章。
+此教材来自[莫凡Python](https://morvanzhou.github.io/tutorials/machine-learning/tensorflow/)，本文旨在分享机器学习学习知识，如有侵权，可联系本人下架文章。
 
 <!--more-->
 
@@ -112,7 +112,7 @@ git clone https://github.com/mnielsen/neural-networks-and-deep-learning.git
 
 顺便说一下，早些时候我在描述MNIST数据时，我说过它被分成了两份，其中60000幅图片用于训练，另外10000幅用于测试。那是MNIST官方的陈述。
 
-```
+```python
 import tensorflow as tf
 from tensorflow.examples.tutorials.mnist import input_data
 
@@ -148,12 +148,14 @@ ys = tf.placeholder(tf.float32,[None,10])
 prediction = add_layer(xs,784,10,activation_function=tf.nn.softmax)
 
 #the error between prediction and real data
+#loss函数（即最优化目标函数）选用交叉熵函数。交叉熵用来衡量预测值和真实值的相似程度，如果完全相同，它们的交叉熵等于零。
 cross_entropy = tf.reduce_mean(-tf.reduce_sum(ys * tf.log(prediction),reduction_indices=[1]))  #loss
 train_step = tf.train.GradientDescentOptimizer(0.5).minimize(cross_entropy)
 
 sess = tf.Session()
 #important step
-sess.run(tf.initialize_all_variables())
+#sess.run(tf.initialize_all_variables())
+sess.run(tf.global_variables_initializer())
 
 for i in range(1000):
     batch_xs,batch_ys = mnist.train.next_batch(100)
@@ -165,5 +167,7 @@ for i in range(1000):
 运行截图：
 
 ![](http://imgss.lovebingzi.com/mnist/1.png)
+
+![](http://imgss.lovebingzi.com/mnist/output.gif)
 
 可以看到，test集的数据准确率通过学习，准确率越来越高。

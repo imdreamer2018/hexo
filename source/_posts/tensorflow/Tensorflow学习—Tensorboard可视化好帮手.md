@@ -14,7 +14,7 @@ date: 2018-04-17 10:34:00
 
 # 利用tensorboard来可视化显示
 
-此教材来自[莫凡Python](https://morvanzhou.github.io/tutorials/machine-learning/tensorflow/)，本文旨在分享深度学习知识，如有侵权，可联系本人下架文章。
+此教材来自[莫凡Python](https://morvanzhou.github.io/tutorials/machine-learning/tensorflow/)，本文旨在分享机器学习知识，如有侵权，可联系本人下架文章。
 
 <!--more-->
 
@@ -54,7 +54,7 @@ Tensorboard可以记录与展示以下数据形式：
 
 ## 2 上一节简单神经网络关于tensorboard的使用案例
 
-```
+```python
 import tensorflow as tf
 import numpy as np
 import matplotlib.pyplot as plt
