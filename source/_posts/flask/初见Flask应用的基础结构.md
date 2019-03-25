@@ -6,7 +6,7 @@ toc: true
 tags:
 
   - python
-  - flask
+  - Flask
 categories: []
 date: 2019-03-25 22:39:00
 

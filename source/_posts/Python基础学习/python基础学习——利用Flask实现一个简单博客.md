@@ -2,7 +2,7 @@ title: python基础学习——利用Flask实现一个简单博客
 author: Imdreamer
 tags:
   - python
-  - flask
+  - Flask
   - Python-web
 categories: []
 date: 2018-02-02 21:45:00
@@ -60,7 +60,7 @@ def login():
         error = 'Invalid username and password'
         return render_template('login.html', error=error)
     else:
-
+    
         session["logged_in"] =True
         flash('You are logged in')
         return redirect(url_for('show_entries'))
