@@ -2,7 +2,7 @@ title: python基础学习——利用Flask实现一个简单博客
 author: Imdreamer
 tags:
   - python
-  - Flask
+  - flask
   - Python-web
 categories: []
 date: 2018-02-02 21:45:00
