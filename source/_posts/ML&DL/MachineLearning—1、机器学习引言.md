@@ -17,7 +17,7 @@ tags:
 
 # 1 引言
 
-此教程来自**吴恩达(Andrew Ng)**[斯坦福机器学习公开课](https://www.coursera.org/course/ml),笔记讲义由中国海洋大学博士**黄海波**整理。
+此教程来自**吴恩达(Andrew Ng)**[斯坦福机器学习公开课](https://www.coursera.org/course/ml),笔记讲义由中国海洋大学博士**黄海广**整理。
 
 本文旨在分享机器学习知识，如有侵权，可联系本人下架文章。
 
