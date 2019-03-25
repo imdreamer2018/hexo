@@ -23,6 +23,8 @@ from flask import Flask
 app = Flask(__name__)
 ```
 
+<!-- more -->
+
 ## 路由和视图函数
 
 客户端把请求发送给Web服务器，Web服务器再把请求发给了Flask应用实例，应用实例需要知道对每个URL的请求要运行哪些代码，所以保存了一个URL到Python函数的映射关系。处理URL和函数之间关系的程序成为**路由**。
