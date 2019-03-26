@@ -1,14 +1,10 @@
 title: leetcode第二题——整数反转
 author: 追梦人
 tags:
-
   - python
-
   - leetcode
-
-  categories: []
-  date: 2019-03-26 14:46:00
-
+categories: []
+date: 2019-03-26 14:46:00
 ---
 
 给出一个 32 位的有符号整数，你需要将这个整数中每位上的数字进行反转。
