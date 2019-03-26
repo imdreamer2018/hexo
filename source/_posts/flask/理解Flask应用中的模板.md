@@ -18,7 +18,7 @@ date: 2019-03-26 19:24:00
 
 形式最简单的Jinja2模板就是一个包含响应文本的文件，如下代码所示。
 
-```html
+```jinja2
 #templates/index.html
 <h1>Hello World!</h1>
 #templates/user.html
@@ -49,7 +49,7 @@ def user(name):
 
 变量的值可以用过滤器修改，过滤器添加变量之后，二者之间一竖线分隔，例如。
 
-```html
+```jinja2
 hello.{{name|capitalize}}
 ```
 
@@ -69,7 +69,7 @@ hello.{{name|capitalize}}
 
 Jinja2提供了多种控制结构，可用来改变模板的渲染流程。
 
-```html
+```jinja2
 #条件判断语句
 {% if user %}
 	Hello,{{user}}!
@@ -99,7 +99,7 @@ Jinja2提供了多种控制结构，可用来改变模板的渲染流程。
 
 基模板中定义的区块可以在衍生模板中覆盖。Jinja2使用block和endblock指令在基模板中定义内容区块。
 
-```html
+```jinja2
 {% extends "base.html"%}
 {% block title %}Index{% endblock %}
 {% block head %}
@@ -174,7 +174,7 @@ from flask_moment import Moment
 moment = Moment(app)
 ```
 
-```
+```jinja2
 #template/base.html：引入Moment.js库
 {% block scripts %}
 {{ super() }}
@@ -192,7 +192,7 @@ def index():
     return render_template('index.html',current_time = datetime.utcnow())
 ```
 
-```html
+```jinja2
 #templates/index.html:使用Flask-Moment时间戳
 <p>The local date and time is {{ moment(current_time).format('LLL') }}</p>
 <p>That was {{ moment(current_time).fromNow(refresh=True) }}</p>
@@ -204,7 +204,7 @@ format('LLL')函数根据客户端计算机中的时区和区域设置渲染日�
 
 Flask-Moment渲染时间戳可实现多种语言的本地化，语言可以在模板中选择，默认是英语，例如配置中文的方式如下：
 
-```
+```jinja2
 {% block scripts %}
 {{ super() }}
 {{ moment.include_moment() }}
