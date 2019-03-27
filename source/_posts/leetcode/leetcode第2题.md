@@ -1,4 +1,4 @@
-title: leetcode第二题——整数反转
+title: leetcode第2题——整数反转
 author: 追梦人
 tags:
   - python

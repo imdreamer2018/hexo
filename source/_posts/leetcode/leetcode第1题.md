@@ -1,4 +1,4 @@
-title: leetcode第一题——两数之和
+title: leetcode第1题——两数之和
 author: 追梦人
 
 toc: true
