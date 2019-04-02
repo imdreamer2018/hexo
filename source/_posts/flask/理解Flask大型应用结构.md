@@ -36,7 +36,7 @@ date: 2019-04-01 21:43:00
   	  |-views.py
   	|-__init__.py
   	|-email.py
-  	|_models.py
+  	|-models.py
   |-migrations/
   |-tests/
   	|-__init__.py
