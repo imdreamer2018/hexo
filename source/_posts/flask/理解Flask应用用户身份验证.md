@@ -694,3 +694,4 @@ def change_email(token):
         flash('请求错误！')
     return redirect(url_for('main.index'))
 ```
+
