@@ -1,4 +1,4 @@
-title: 数学公式神器Mathpix Snip——妈妈再也不用担心我不会写数学公式了！
+title: 数学公式神器Mathpix Snip—妈妈再也不用担心我不会写数学公式了！
 author: 追梦人
 
 toc: true
