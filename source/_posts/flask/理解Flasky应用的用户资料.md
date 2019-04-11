@@ -1,4 +1,4 @@
-title: 理解Flask应用的用户资料
+title: 理解Flasky应用的用户资料
 author: 追梦人
 
 toc: true
