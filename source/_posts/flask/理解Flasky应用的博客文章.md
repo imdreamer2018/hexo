@@ -304,3 +304,4 @@ def edit(id):
     form.body.data = post.body
     return render_template('edit_post.html',form=form)
 ```
+

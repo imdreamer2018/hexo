@@ -74,7 +74,7 @@ class User(db.Model):
     	return check_password_hash(self.password_hash,password)
 ```
 
-计算密码散列值的函数通过名为password的只写属性实现。设定这个属性的值时，赋值方法会调用Wekzeug提供的`generate_password_hash()`函数，并把得到的结果写入`password_hash`字段。如果视图读取password属性的值，则会返回错误，原因很明显，因为生成散列值后就无法还原成原来的密码了。
+计算密码散列值的函数通过名为`password`的只写属性实现。设定这个属性的值时，赋值方法会调用Wekzeug提供的`generate_password_hash()`函数，并把得到的结果写入`password_hash`字段。如果视图读取`password`属性的值，则会返回错误，原因很明显，因为生成散列值后就无法还原成原来的密码了。
 
 `verify_password()`方法接受一个参数（即密码），将其传给Werkzeug提供的`check_password_hash()`。
 
