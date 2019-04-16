@@ -31,7 +31,7 @@ https=http+ssl，顾名思义，https是在http的基础上加上了SSL保护壳
 
 首先我们先不谈https，先从一个简单的通讯原理图讲起：
 
-![图片.png](https://s1.51cto.com/images/20180814/1534258036145126.png?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_100,g_se,x_10,y_10,shadow_90,type_ZmFuZ3poZW5naGVpdGk=)
+![AxPMOH.png](https://s2.ax1x.com/2019/04/16/AxPMOH.png)
 
 http通信原理
 
@@ -41,11 +41,11 @@ http通信原理
 
 http：client hello和server hello在通讯的过程中，以明文的形式进行传输，采用wireshark抓包的效果如下图：
 
-![图片.png](https://s1.51cto.com/images/20180814/1534247878170067.png?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_100,g_se,x_10,y_10,shadow_90,type_ZmFuZ3poZW5naGVpdGk=)
+![AxPlmd.png](https://s2.ax1x.com/2019/04/16/AxPlmd.png)
 
 有没有感觉这个的信息传输是完全暴露在互联网上面，你请求的所有信息都可以被窥测到，是不是感觉心一凉，不过不用担心，我们的安全信息现在都是采用https的传输，后面讲到https的时候大家心里会顿时轻松。但这不是最关键的，http的传输最大的隐患是信息劫持和篡改，如下图：
 
-![http×××1.png](https://s1.51cto.com/images/20180814/1534248048113307.png?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_100,g_se,x_10,y_10,shadow_90,type_ZmFuZ3poZW5naGVpdGk=)
+![AxPulD.png](https://s2.ax1x.com/2019/04/16/AxPulD.png)
 
 可以看到，http的信息传输中，信息很容易被×××给劫持，更有甚者，×××可以伪装服务器将篡改后的信息返回给用户，试想一下，如果×××劫持的是你的银行信息，是不是很可怕。所以对于http传出存在的问题可以总结如下：
 
@@ -55,26 +55,26 @@ http：client hello和server hello在通讯的过程中，以明文的形式进�
 
 这些是http不安全的体现，说完http，我们回到本文的主题https，看下人家是怎么保护信息的，所有的请求信息都采用了TLS加密，如果没有秘钥是无法解析传输的是什么信息
 
-![图片.png](https://s1.51cto.com/images/20180814/1534248761169658.png?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_100,g_se,x_10,y_10,shadow_90,type_ZmFuZ3poZW5naGVpdGk=)
+![AxPK6e.png](https://s2.ax1x.com/2019/04/16/AxPK6e.png)
 
 对于加密传输存在对称加密和非对称加密
 
 ### **对称加密**
 
 
-![图片.png](https://s1.51cto.com/images/20180814/1534258064254898.png?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_100,g_se,x_10,y_10,shadow_90,type_ZmFuZ3poZW5naGVpdGk=)
+![AxP10A.png](https://s2.ax1x.com/2019/04/16/AxP10A.png)
 
 对称加密传输
 
 当客户端发送Hello字符串的时候，在进行信息传输前，采用加密算法（上图中的秘钥S）将hello加密程JDuEW8&*21!@#进行传输，即使中间被×××劫持了，如果没有对应的秘钥S也无法知道传出的信息为何物，在上图中信息的加密和解密都是通过同一个秘钥进行的，对于这种加密我们称之为**对称加密，**只要A和B之间知道加解密的秘钥，任何第三方都无法获取秘钥S，则在一定条件下，基本上解决了信息通信的安全问题。但在现实的情况下（www），实际的通讯模型远比上图复杂，下图为实际的通信模型
 
-![图片.png](https://s1.51cto.com/images/20180814/1534258103594154.png?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_100,g_se,x_10,y_10,shadow_90,type_ZmFuZ3poZW5naGVpdGk=)
+![AxP3TI.png](https://s2.ax1x.com/2019/04/16/AxP3TI.png)
 
 server和所有的client都采用同一个秘钥S进行加解密，但大家思考下，如果这样的话，无异于没有加密，请做下思考
 
 由于server和所有的client都采用同一个秘钥S，则×××们作为一个client也可以**获取**到秘钥S，此地无银三百两。所以在实际的通讯中，**一般不会采用同一个秘钥，而是采用不同的秘钥加解密，如下图**
 
-**![图片.png](https://s1.51cto.com/images/20180814/1534258122976487.png?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_100,g_se,x_10,y_10,shadow_90,type_ZmFuZ3poZW5naGVpdGk=)**
+![AxPGkt.png](https://s2.ax1x.com/2019/04/16/AxPGkt.png)
 
 **通过协商的方式获取不同的秘钥**
 
@@ -84,7 +84,7 @@ server和所有的client都采用同一个秘钥S进行加解密，但大家思�
 
 ## **如何对协商过程进行加密**
 
-**![图片.png](https://s1.51cto.com/images/20180814/1534258138493233.png?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_100,g_se,x_10,y_10,shadow_90,type_ZmFuZ3poZW5naGVpdGk=)**
+![AxPJtP.png](https://s2.ax1x.com/2019/04/16/AxPJtP.png)
 
 **非对称加密原理图**
 
@@ -100,9 +100,7 @@ server和所有的client都采用同一个秘钥S进行加解密，但大家思�
 
 因此，如何协商加密算法的问题，我们解决了，**非对称加密算法进行对称加密算法协商过程。**
 
-**![对与非结合.png](https://s1.51cto.com/images/20180814/1534251782432794.png?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_100,g_se,x_10,y_10,shadow_90,type_ZmFuZ3poZW5naGVpdGk=)**
-
-
+![AxPefK.png](https://s2.ax1x.com/2019/04/16/AxPefK.png)
 
 **在这里我们做个小结：信息通信采用http是不安全的，存在信息劫持、篡改的风险，https是加密传输，是安全的通信，对于https加密的过程，我们首先介绍的对称加密，采用对称加密进行通信存在秘钥协商过程的不安全性，因此我们采用了非对称加密算法解决了对协商过程的加密，因此https是集对称加密和非对称加密为一体的加密过程**。
 
@@ -112,11 +110,11 @@ server和所有的client都采用同一个秘钥S进行加解密，但大家思�
 
 这下，我们又遇到新问题了，**如何让A、B客户端安全地得到公钥**？
 
-**![图片.png](https://s1.51cto.com/images/20180814/1534258161228233.png?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_100,g_se,x_10,y_10,shadow_90,type_ZmFuZ3poZW5naGVpdGk=)**
+![AxPNp8.png](https://s2.ax1x.com/2019/04/16/AxPNp8.png)
 
 client获取公钥最最直接的方法是服务器端server将公钥发送给每一个client用户，但这个时候就出现了公钥被劫持的问题，如上图，client请求公钥，在请求返回的过程中被×××劫持，那么我们将采用劫持后的假秘钥进行通信，则后续的通讯过程都是采用假秘钥进行，数据库的风险仍然存在。在获取公钥的过程中，我们又引出了一个新的话题：**如何安全的获取公钥，并确保公钥的获取是安全的**， 那就需要用到终极武器了：SSL 证书（需要购买）和CA机构
 
-![SSL证书.png](https://s1.51cto.com/images/20180814/1534251965821525.png?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_100,g_se,x_10,y_10,shadow_90,type_ZmFuZ3poZW5naGVpdGk=)
+![AxPnSO.png](https://s2.ax1x.com/2019/04/16/AxPnSO.png)
 
 如上图所示，在第 ② 步时服务器发送了一个SSL证书给客户端，SSL 证书中包含的具体内容有证书的颁发机构、有效期、公钥、证书持有者、签名，通过第三方的校验保证了身份的合法，**解决了公钥获取的安全性**
 
