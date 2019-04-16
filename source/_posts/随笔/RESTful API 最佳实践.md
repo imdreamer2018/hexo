@@ -15,7 +15,7 @@ date: 2019-04-13 11:21:00
 
 # RESTful API 最佳实践
 
-本文转载自阮一峰的网络日志，原文链接[点击这儿](http://www.ruanyifeng.com/blog/2011/09/restful.html)。转载仅用于学习。
+本文转载自阮一峰的网络日志，原文链接[点击这儿](http://www.ruanyifeng.com/blog/2018/10/restful-api-best-practices.html)。转载仅用于学习。
 
 RESTful 是目前最流行的 API 设计规范，用于 Web 数据接口的设计。
 

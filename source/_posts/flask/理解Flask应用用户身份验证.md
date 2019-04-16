@@ -357,7 +357,7 @@ b'eyJhbGciOiJIUzUxMiIsImlhdCI6MTU1NDE4OTgxMiwiZXhwIjoxNTU0MTkzNDEyfQ.eyJjb25maXJ
 {'confirm': 23}
 ```
 
-`itsdangerous`提供了多种生成令牌的方法。其中，`TimedJSONWebSignatureSerializer`类生成具有过期时间的`JSON Web`签名（JWS）。这个类的构造函数接受参数是一个密钥。
+`itsdangerous`提供了多种生成令牌的方法。其中，`TimedJSONWebSignatureSerializer`类生成具有过期时间的`JSON Web`签名（JWS）。这个类的构造函数接受参数是一个密钥，在Flask应用中可使用`SECTER_KEY`设置。
 
 `dumps()`方法为指定的数据生成一个加密签名，然后再对数据和签名进行序列化，生成令牌字符串。`expires_in`参数设置令牌过期时间，单位为秒。
 
