@@ -1,4 +1,4 @@
-title: 梳理Flasky应用的HTTPAuth验证用户身份逻辑
+title: 梳理HTTPAuth验证用户身份逻辑
 author: 追梦人
 
 toc: true
@@ -140,7 +140,7 @@ class HTTPBasicAuth(HTTPAuth):
         return f
 ```
 
-这里的`self.verify_password_callback`是回调函数，这里就需要我们手动写回调函数，然后将回调函数传入`verify_password`，然后再将函数回调给`verify_password_callback`。关于什么是回调函数，可以在我的博客中查看，链接地址：点击这儿。
+这里的`self.verify_password_callback`是回调函数，这里就需要我们手动写回调函数，然后将回调函数传入`verify_password`，然后再将函数回调给`verify_password_callback`。关于什么是回调函数，可以在我的博客中查看，链接地址：[点击这儿](https://www.dreamer.im/2019/04/16/%E9%9A%8F%E7%AC%94/%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0/)。
 
 ### 添加verify_password回调函数
 
