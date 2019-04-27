@@ -285,7 +285,7 @@ U005 2017-08-05 09:00~11:00 D
 
 ### **程序入口模块**
 
-```shell
+```python
 #thoughtworks/app.py
 import sys
 from thoughtworks.InsertControler import InsertControler
