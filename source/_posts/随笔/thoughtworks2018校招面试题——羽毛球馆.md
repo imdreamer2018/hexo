@@ -53,7 +53,7 @@ date: 2019-04-27 20:07:00
 
 由于手头还有其他工作，小明希望能够借助计算机程序来自动化处理预订及取消预订的事务，并且希望程序能够打印出场馆的收入汇总情况。
 
-### **程序输入**
+## **程序输入**
 
 **预订：用户预订以字符串的形式输入，一行字符串代表一个预定**
 
@@ -73,7 +73,7 @@ date: 2019-04-27 20:07:00
 
 - 格式为，输入一个空行，代表打印收入汇总
 
-### **程序输出**
+## **程序输出**
 
 **收入汇总：以文本的形式输出当前系统所有预订以及取消预订所带来的收入情况，以不同的场地分组，一个可能的输出如下所示：**
 
@@ -250,7 +250,7 @@ U005 2017-08-05 09:00~11:00 D
 
 ![EK7kJe.png](https://s2.ax1x.com/2019/04/27/EK7kJe.png)
 
-#### **代码文件结构**
+### **代码文件结构**
 
 ```
 #代码文件结构
@@ -267,7 +267,7 @@ U005 2017-08-05 09:00~11:00 D
 |-venv
 ```
 
-#### 各类模块说明
+### 各类模块说明
 
 | 模块             | 文件名              | 说明                                                         |
 | ---------------- | ------------------- | ------------------------------------------------------------ |
@@ -283,7 +283,7 @@ U005 2017-08-05 09:00~11:00 D
 
 ## 编码
 
-#### **程序入口模块**
+### **程序入口模块**
 
 ```shell
 #thoughtworks/app.py
@@ -311,7 +311,7 @@ if __name__ == '__main__':
             print('Error: the booking is invalid!')
 ```
 
-#### **程序设置模块**
+### **程序设置模块**
 
 ```python
 #thoughtworks/Config.py
@@ -337,7 +337,7 @@ class Charges:
     Promotions = ['2016-04-01 2016-04-02 6','2017-08-01 2017-08-03 8']
 ```
 
-#### 公共计费模块
+### 公共计费模块
 
 ```python
 #thoughtworks/ChargesControler.py
@@ -430,7 +430,7 @@ def ChargesControler(time):
     return 1,whatday,startTime_,endTime,timeLength,cost,promotion
 ```
 
-#### 公共数据存储模块
+### 公共数据存储模块
 
 ```python
 #thoughtworks/DataControler.py
@@ -484,7 +484,7 @@ def CancelDataControler(site,f):
         database.data[site][f]['cost'] = cost * Charges.breakPromise[1]
 ```
 
-#### 输入控制模块
+### 输入控制模块
 
 ```python
 #thoughtworks/InsertControler.py
@@ -554,7 +554,7 @@ def InsertControler(list):
         return False
 ```
 
-#### 功能模块控制
+### 功能模块控制
 
 ```python
 #thoughtworks/ModelControler.py
@@ -601,7 +601,7 @@ def cancel(list):
     return CancelControler(site, userID, time_)
 ```
 
-#### 预定功能模块
+### 预定功能模块
 
 ```python
 #thoughtworks/OrderControler.py
@@ -642,7 +642,7 @@ def OrderControler(site,userID,time_):
         return False
 ```
 
-#### 取消功能模块
+### 取消功能模块
 
 ```python
 #thoughtworks/CancelControler.py
@@ -676,7 +676,7 @@ def CancelControler(site,userID,time_):
         return False
 ```
 
-#### 测试模块
+### 测试模块
 
 ```python
 #thoughtworks/test_client.py
