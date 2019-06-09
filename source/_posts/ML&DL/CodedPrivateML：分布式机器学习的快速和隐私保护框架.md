@@ -3,13 +3,15 @@ author: 追梦人
 
 toc: true
 
+categories: []
+
+date: 2019-06-09 21:23:00
+
 tags:
 
 - MachineLearning
 - Privacy-Preserving
 - Cryptology
-  categories: []
-  date: 2019-06-09 21:23:00
 
 ---
 
@@ -21,7 +23,7 @@ tags:
 
 如何在保持数据私密性和安全性的同时培养机器学习模型？我们提出CodedPrivateML，这是一个快速，可扩展的方法来解决这个关键问题。CodedPrivateML保持数据和模型信息 - 理论上是私有的，同时允许跨分布式工作人员的培训的高效并行化。我们描述了CodedPrivateML的隐私阈值，并证明了它在逻辑（和线性）回归方面的收敛性。此外，通过Amazon EC2上的实验，我们证明CodedPrivateML可以提供比最先进的加密方法快一个数量级的加速（高达~34倍）
 
-<!-- more-->
+<!--more-->
 
 ## 1.介绍
 
