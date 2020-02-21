@@ -14,7 +14,7 @@ function run() {
 		exit(1);
 	} else {
 		echo("======================Auto Backup Begin===========================");
-		cd('A:/hexo');    //此处修改为Hexo根目录路径
+		cd('/Users/yangqian/Documents/www.dreamer.im/hexo');    //此处修改为Hexo根目录路径
 		if (exec('git add --all').code !== 0) {
 			echo('Error: Git add failed');
 			exit(1);
