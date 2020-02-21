@@ -73,7 +73,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: yilia
+theme: yilia-plus
 jsonContent:
     meta: false
     pages: false
@@ -96,5 +96,5 @@ jsonContent:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
    type: git
-   repository: https://github.com/imdreamer2018/python.git
+   repository: https://github.com/imdreamer2018/blog.git
    branch: master
