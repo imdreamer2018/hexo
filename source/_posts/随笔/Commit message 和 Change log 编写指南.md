@@ -1,18 +1,17 @@
 title: Commit message 和 Change log 编写指南
+
 author: 追梦人
 
 toc: true
 
+categories: []
+date: 2020-02-21 19:57:00
+
 tags:
 
   - Git
-
-  - 编写规范
-
+  - 版本控制工具
   - 随笔
-
-  categories: []
-  date: 2020-02-21 19:40:00
 
 ---
 
