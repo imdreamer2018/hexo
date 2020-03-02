@@ -1,4 +1,4 @@
-﻿# Header-菜单
+# Header-菜单
 menu:
   主页: /
   PYTHON: /tags/python/
@@ -55,11 +55,11 @@ excerpt_link: more
 # 文章卡片右下角常驻链接，不需要请设置为false
 show_all_link: '展开全文'
 # 数学公式
-mathjax: ture
+mathjax: true
 
 # Open link in a new tab | 是否在新窗口打开链接
 open_in_new:
-  article: true  # 文章链接
+  article: false  # 文章链接
   menu: false   # 导航菜单
   subNav: false  # 子菜单
 
